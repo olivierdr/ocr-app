@@ -1,0 +1,13 @@
+#**./documents/uploads/images/
+*.jpeg
+*.jpg
+*.ipynb_checkpoints
+*.ipynb
+
+__pycache__/
+.ipynb_checkpoints/
+results/
+**/documents/uploads/
+notebooks/
+
+*.pyc 

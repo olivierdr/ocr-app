@@ -1,0 +1,20 @@
+version: "3.3"
+
+services:
+  jupyterlab:
+    image: ocr-app
+    stdin_open: true
+    tty: true
+    container_name: jupyterlab_container
+    restart: always
+    build: .
+    command: jupyter-lab --ip=0.0.0.0 --allow-root --no-browser --port=8888
+    entrypoint: /bin/bash
+    ports:
+        #hostmachine:container
+      - 9000:8888
+    working_dir: /usr/home
+    volumes:
+      - type: bind
+        source: .
+        target: /usr/home/OCR-App
